@@ -1,0 +1,11 @@
+parameters:
+	level: max
+	paths:
+		- ../../etc
+		- ../../src
+		- ../../tests
+	ignoreErrors:
+		-
+			identifier: assign.propertyType
+			message: '#Property PhpParser\\Node\\Identifier\:\:\$name \(non\-empty\-string\) does not accept string#'
+			path: ../../src/Rules/ReplaceTestFunctionPrefixWithAttributeRector.php
