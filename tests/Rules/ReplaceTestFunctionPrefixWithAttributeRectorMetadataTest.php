@@ -16,7 +16,7 @@ final class ReplaceTestFunctionPrefixWithAttributeRectorMetadataTest extends Tes
     #[Test]
     public function getRuleDefinitionDescribesTheRule(): void
     {
-        $rector = self::getContainer()->make(ReplaceTestFunctionPrefixWithAttributeRector::class);
+        $rector = $this->getContainer()->make(ReplaceTestFunctionPrefixWithAttributeRector::class);
 
         self::assertSame(
             'Replace @test with prefixed function',
@@ -27,12 +27,12 @@ final class ReplaceTestFunctionPrefixWithAttributeRectorMetadataTest extends Tes
     #[Test]
     public function getNodeTypesTargetsClassMethods(): void
     {
-        $rector = self::getContainer()->make(ReplaceTestFunctionPrefixWithAttributeRector::class);
+        $rector = $this->getContainer()->make(ReplaceTestFunctionPrefixWithAttributeRector::class);
 
         self::assertSame([ClassMethod::class], $rector->getNodeTypes());
     }
 
-    private static function getContainer(): RectorConfig
+    private function getContainer(): RectorConfig
     {
         /** @var RectorConfig|null $rectorConfig */
         static $rectorConfig = null;

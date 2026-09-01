@@ -13,7 +13,7 @@
         "rector/rector": "^2.6.1"
     },
     "require-dev": {
-        "wyrihaximus/makefiles": "^0.13.3",
+        "wyrihaximus/makefiles": "^0.14.7",
         "wyrihaximus/qa-tooling-wrapper": "^2.0.0"
     },
     "autoload": {

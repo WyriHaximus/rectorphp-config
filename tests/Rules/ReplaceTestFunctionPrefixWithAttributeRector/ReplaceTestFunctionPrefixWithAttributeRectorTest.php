@@ -6,11 +6,13 @@ namespace WyriHaximus\Tests\RectorPHP\Rules\ReplaceTestFunctionPrefixWithAttribu
 
 use Iterator;
 use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\Attributes\Test;
 use Rector\Testing\PHPUnit\AbstractRectorTestCase;
 
 final class ReplaceTestFunctionPrefixWithAttributeRectorTest extends AbstractRectorTestCase
 {
     #[DataProvider('provideData')]
+    #[Test]
     public function test(string $filePath): void
     {
         $this->doTestFile($filePath);

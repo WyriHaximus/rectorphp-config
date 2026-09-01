@@ -60,7 +60,7 @@ final class RectorConfigTest extends TestCase
                     $packageRoot . '/etc',
                     $packageRoot . '/src',
                 ],
-                self::getPaths($packageRoot),
+                $this->getPaths($packageRoot),
             );
         } finally {
             rmdir($packageRoot . '/src');
@@ -70,7 +70,7 @@ final class RectorConfigTest extends TestCase
     }
 
     /** @return list<string> */
-    private static function getPaths(string $packageRoot): array
+    private function getPaths(string $packageRoot): array
     {
         $method = new ReflectionMethod(RectorConfig::class, 'getPaths');
 
